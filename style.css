@@ -157,6 +157,8 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .shop-now {
