@@ -255,21 +255,21 @@ body {
     border: 1px solid;
   }
   .size-btn:hover {
-    background-color: #dfd356;
-    color: #333;
+    background-color: #003dff;
+    color: #fff;
     border: none;
   }
   .quantity-btn:hover {
     background-color: #003060;
-    color: #dfd356;
+    color: #fff;
     border: none;
   }
   .active {
     box-sizing: border-box;
     width: 55px;
     height: 25px;
-    background-color: #dfd356;
-    color: #333;
+    background-color: #003dff;
+    color: #fff;
     border: none;
   }
   .bag-btn {
@@ -283,7 +283,7 @@ body {
     margin-top: 10px;
   }
   .bag-btn:hover {
-    background-color: #dfd356;
-    color: #333;
+    background-color: #003dff;
+    color: #fff;
     border: none;
   }

@@ -164,6 +164,12 @@ body {
   .nav_header ul li a {
     font-size: 14px;
   }
+  @media (max-width: 700px) {
+    .search_bar {
+      display: none;
+    }
+    
+  }
 }
 section {
   height: auto;
