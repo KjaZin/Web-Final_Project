@@ -18,8 +18,8 @@ body {
 }
 .nav_header ul li {
   list-style: none;
-  font-size: x-large;
-  margin: 15px;
+  font-size: 23px;
+  margin: 10px;
   margin-top: 40px;
   cursor: pointer;
 }
@@ -27,7 +27,7 @@ body {
   text-decoration: none;
   color: black;
   position: relative;
-  padding: 5px;
+  gap: 10px;
 }
 .nav_header ul li a::before {
   position: absolute;
@@ -49,10 +49,10 @@ body {
 .nav_header ul li a:hover {
   color: white;
   background-color: #007bff;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .nav_header ul .active {
-  border-radius: 7px;
+  border-radius: 4px;
   background-color: #007bff;
   color: #f4f4f4;
   a {
@@ -66,24 +66,23 @@ body {
 
 .icon_logo {
   border-radius: 90%;
-  margin: auto;
-  width: 80px;
-  margin-top: -25px;
+  width: 110px;
+  margin-top: -30px;
 }
 .nav_header {
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1600px) {
   .nav_header ul li {
-    margin: auto;
-    padding: 10px;
-    font-size: large;
+    gap: auto;
+    font-size: 23px;
   }
   .icon_logo {
     margin: auto;
-    width: 60px;
+    width: 70px;
+    margin-left: -60px;
   }
 }
 
@@ -239,4 +238,111 @@ body {
 }
 h3 {
   margin-top: 35px;
+}
+/* Menu Bar*/
+/* Sidebar Styles */
+#sidebar-active {
+  display: none;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+  cursor: pointer;
+  background-color: white;
+  color: gray;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+@media (max-width: 1090px) {
+  .nav_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    background-color: lightgray;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transform: translateX(-100%); /* Initially hidden off-screen */
+    transition: transform 0.3s ease;
+    opacity: 0.9;
+  }
+  .nav_header ul li a {
+    font-size: 20px;
+  }
+
+  .left_side {
+    flex-direction: column;
+    position: absolute;
+    left: 15vh;
+  }
+  .right_side {
+    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 14px;
+  }
+  .open-sidebar-button,
+  .close-sidebar-button {
+    display: block;
+    margin-top: 30px;
+  }
+  #sidebar-active:checked ~ .nav_header {
+    transform: translateX(0); /* Slide into view */
+  }
+  .open-sidebar-button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 77vh;
+    z-index: 20;
+  }
+  .close-sidebar-button {
+    display: block;
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-top: 10px;
+    z-index: 1;
+  }
+  .icon_logo {
+    position: fixed;
+    left: 36vh;
+    width: 150px;
+    top: 2vh;
+  }
+  .icon,
+  .search_bar {
+    position: absolute;
+    left: 50vh;
+  }
+  .container {
+    margin-top: 12vh;
+  }
+  .search_bar {
+    margin-top: 7px;
+    width: 50%;
+    flex-wrap: wrap;
+  }
+  .icon {
+    margin-top: 10px;
+    margin-left: 12vh;
+  }
+  .login_text,
+  .register_text {
+    position: absolute;
+    top: 36vh;
+  }
+  .login_text {
+    left: 1vh;
+  }
+  .register_text {
+    left: 15vh;
+  }
 }
