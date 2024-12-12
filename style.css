@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 10px;
 }
 body {
   background-color: white;
@@ -15,23 +14,28 @@ body {
 .container {
   background-color: white;
   width: 85%;
-  height: 200vh;
+  height: auto;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 .nav_header {
-  background-color: #dfd356;
+  background-color: #fff;
   color: #333;
+  height: 80px;
+  width: 100%;
 }
 .nav_header ul li {
   list-style: none;
-  font-size: 1.6rem;
-  margin: 15px;
+  font-size: 32px;
   cursor: pointer;
 }
 .nav_header ul li a {
   text-decoration: none;
   position: relative;
-  color: black;
+  color: #333;
   padding: 5px 0;
 }
 .nav_header ul li a::before {
@@ -41,7 +45,7 @@ body {
   bottom: 0;
   height: 3px;
   width: 100%;
-  background: red;
+  background: #fff;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s linear;
@@ -51,7 +55,7 @@ body {
   transform-origin: left;
 }
 .nav_header ul .active {
-  background-color: #003060;
+  background-color: #003dff;
   color: #fff;
   a {
     color: #fff;
@@ -62,7 +66,7 @@ body {
   width: fit-content;
 }
 .nav_header ul .link-icons:hover {
-  background-color: #003060;
+  background-color: #003dff;
   color: #fff;
   a {
     color: #fff;
@@ -88,10 +92,9 @@ body {
   justify-content: space-between;
 }
 .search_bar {
-  background-color: #dfd356;
   border: 2px solid #333;
   height: 30px;
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 .search_bar::placeholder{
   color: #333;
@@ -100,14 +103,14 @@ body {
   .nav_header ul li {
     margin: auto;
     padding: 10px;
-    font-size: 3.2rem;
+    font-size: 32px;
   }
   .nav_header ul li a {
-    font-size: 2.2rem;
+    font-size: 22px;
   }
   .icon_logo {
-    margin: auto;
-    width: 60px;
+    margin-top: -20px;
+    width: 100px;
   }
 }
 
@@ -126,12 +129,40 @@ body {
 }
 @media (max-width: 1300px) {
   .icon_logo {
+    margin-top: -20px;
     width: 100px;
-    padding-left: 60px;
   }
   .nav_header ul li a {
-    font-size: 1.8rem;
-    margin-left: auto;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1090px){
+  .nav_header {
+    height: 120px;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 60px 60px;
+  }
+  .special-event h3 {
+    font-size: 18px;
+  }
+  .special-event p {
+    font-size: 14px;
+  }
+  .nav-links {
+    grid-row: 2;
+    grid-column: 2 span ;
+    display: flex;
+    background-color: #f4f4f4;
+    align-items: center;
+    justify-content: start ;
+  }
+  .icon_logo {
+    margin-top: -20px;
+    width: 80px;
+  }
+  .nav_header ul li a {
+    font-size: 14px;
   }
 }
 section {
@@ -165,19 +196,19 @@ section {
   width: 100px;
   height: 40px;
   align-self: center;
-  background-color: #dfd356;
-  color: #333;
+  background-color: #003dff;
+  color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 14px;
   flex-grow: 0;
   margin-right: 3%;
 }
 h3 {
-  font-size: 2.2rem;
+  font-size: 22px;
 }
 p {
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 
 .shop-now:hover {
@@ -194,17 +225,6 @@ p {
   margin: 5px 0 0;
 }
 
-@media (max-width: 768px) {
-  .content-header {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .shop-now {
-    margin-top: 10px;
-  }
-}
-
 .content-card {
   margin-top: 20px;
   display: grid;
@@ -219,10 +239,10 @@ p {
 }
 .moment-price {
   color: red;
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 .ori-price {
-  font-size: 1.4rem;
+  font-size: 14px;
   text-decoration: line-through;
 }
 .card {
@@ -233,7 +253,7 @@ p {
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 2.4rem;
+  font-size: 24px;
   width: 30px;
   height: 30px;
   box-sizing: border-box;
