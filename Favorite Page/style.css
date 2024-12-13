@@ -22,7 +22,7 @@ body {
   gap: 20px;
 }
 .nav_header {
-  background-color: #fff;
+  background-color: #dfd356;
   color: #333;
   height: 80px;
   width: 100%;
@@ -55,7 +55,7 @@ body {
   transform-origin: left;
 }
 .nav_header ul .active {
-  background-color: #003dff;
+  background-color: #003060;
   color: #fff;
   a {
     color: #fff;
@@ -66,7 +66,7 @@ body {
   width: fit-content;
 }
 .nav_header ul .link-icons:hover {
-  background-color: #003dff;
+  background-color: #003060;
   color: #fff;
   a {
     color: #fff;
@@ -92,6 +92,7 @@ body {
   justify-content: space-between;
 }
 .search_bar {
+  background-color: #dfd356;
   border: 2px solid #333;
   height: 30px;
   font-size: 16px;
@@ -153,7 +154,6 @@ body {
     grid-row: 2;
     grid-column: 2 span ;
     display: flex;
-    background-color: #f4f4f4;
     align-items: center;
     justify-content: start ;
   }
